@@ -5,6 +5,7 @@ import axios from 'axios';
 class CreateAesthetic extends Component {
     constructor(props) {
         super(props);
+
         // store form fields in state
         this.state = {
             title: '',
@@ -30,7 +31,7 @@ class CreateAesthetic extends Component {
         event.preventDefault();
 
         // send a POST request to the server
-        // the request includes the state, which is the info. for the new user to be created
+        // the request includes the state, which is the info. for the new aesthetic to be created
 
         axios.post('/api/aesthetics', this.state)
             .then(res => this.props.history.push('/')) // if successful go to home
@@ -41,7 +42,6 @@ class CreateAesthetic extends Component {
 
     render() {
 
-        // note: name of the inputs must match the property names in state
         return (
             <div className="uk-container uk-container-xsmall uk-margin-large-top">
 

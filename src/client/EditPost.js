@@ -5,8 +5,9 @@ import axios from 'axios';
 class EditPost extends Component {
     constructor(props) {
         super(props);
-        // store information relating to the user in state
-        // should match the user object from the API
+
+        // store information relating to the post in state
+        // should match the post object from the API
         this.state = {
             title: '',
             image: '',
@@ -23,8 +24,8 @@ class EditPost extends Component {
     }
 
     componentDidMount() {
-    // when this Component mounts, fetch data relating to the user to be edited
-    // the user's ID is passed in via the URL and accessed via props
+    // when this Component mounts, fetch data relating to the post to be edited
+    // the post's ID is passed in via the URL and accessed via props
         axios.get('/api/posts/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
@@ -41,9 +42,7 @@ class EditPost extends Component {
 
         axios.get('api/aesthetics')
             .then(response => {
-                // this.setState({ aesthetic_id: response.data[0]._id });
                 this.setState({ aesthetics: response.data });
-                // console.log(response.data[0]._id);
             })
             .catch(error => {
                 console.log(error);
@@ -63,7 +62,7 @@ class EditPost extends Component {
         event.preventDefault();
 
         // send a PUT request to the server
-        // the request includes the state, which is the updated user information
+        // the request includes the state, which is the updated post information
         axios.put('/api/posts', this.state)
             .then(res => this.props.history.push('/')) // if successful go to home
             .catch(error => {

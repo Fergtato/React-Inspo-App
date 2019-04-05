@@ -5,6 +5,7 @@ import axios from 'axios';
 class CreatePost extends Component {
     constructor(props) {
         super(props);
+
         // store form fields in state
         this.state = {
             title: '',
@@ -45,7 +46,7 @@ class CreatePost extends Component {
         event.preventDefault();
 
         // send a POST request to the server
-        // the request includes the state, which is the info. for the new user to be created
+        // the request includes the state, which is the info. for the new post to be created
 
         axios.post('/api/posts', this.state)
             .then(res => this.props.history.push('/')) // if successful go to home

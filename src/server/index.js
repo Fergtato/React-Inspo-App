@@ -96,13 +96,11 @@ server.delete('/api/posts', (req, res) => {
     });
 });
 
-// update user based on info supplied in request body
 server.put('/api/posts', (req, res) => {
-    // get the ID of the user to be updated
     const id = req.body._id;
     // remove the ID so as not to overwrite it when updating
     delete req.body._id;
-    // find a user matching this ID and update their details
+    // find a post matching this ID and update its details
     Post.updateOne( {_id: new ObjectID(id) }, {$set: req.body}, (err, result) => {
         if (err) throw err;
 

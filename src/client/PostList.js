@@ -37,14 +37,14 @@ class PostList extends Component {
     }
 
     handleDelete(postId) {
-    // make a DELETE request to the server to remove the user with this userId
+    // make a DELETE request to the server to remove the post with this id
         axios.delete('api/posts', {
             data: {
                 id: postId
             }
         })
             .then(response => {
-                // if delete was successful, re-fetch the list of users, will trigger a re-render
+                // if delete was successful, re-fetch the list of posts, will trigger a re-render
                 this.updatePosts();
             })
             .catch(error => {

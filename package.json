@@ -1,5 +1,5 @@
 {
-  "name": "mern-full-stack-one-many",
+  "name": "Design Inspiration App",
   "version": "1.0.0",
   "description": "Demo Full Stack MongoDB, Express, React & Node",
   "main": "src/server/index.js",
