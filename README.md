@@ -1,64 +1,96 @@
-# mern-full-stack-one-many
+# React Design Inspiration App
 
-This is an example of a full stack web application using React, Node.js, Express, MongoDB and Webpack.
+## [Live Demo](https://inspo-app.herokuapp.com)
 
-This example demonstrates how a one to many relationship can be setup in MongoDB. In this case each lecturer can be teaching many modules.
+For this assignment we were tasked with developing a full web application (front end and back end) using MongoDB, Express, React and Node, commonly referred to a MERN Stack. We were instructed to develop a back end REST API with custom calls for GET,POST,PUT and DELETE using MongoDB as well as a front using the React front end javascript framework and a CSS framework of our choosing.
 
-To get started the data in `lecturers.json` and `modules.json` should be inserted into collections named `lecturers` and `modules` in a MongoDB named `lecturer-modules`.
-
-![Gif of app in action](https://i.imgur.com/O1dfyrX.gif)
-
-It is based on the [Simple React Full Stack Boilerplate project](https://github.com/crsandeep/simple-react-full-stack).
-
-- [mern-full-stack](#mern-full-stack)
-  - [Introduction](#introduction)
-    - [Development mode](#development-mode)
-    - [Production mode](#production-mode)
-  - [Quick Start](#quick-start)
-  - [MongoDB](#mongodb)
-    - [Local Database](#local-database)
-    - [Cloud Database](#cloud-database)
-    - [Working with your DB](#working-with-your-db)
-  - [Express](#express)
-  - [React](#react)
-  - [Heroku](#deploying-to-heroku)
-
-
-## Introduction
-
-[Create React App](https://github.com/facebook/create-react-app) is a quick way to get started with React development and it requires no build configuration. But it completely hides the build config which makes it difficult to extend. It also requires some additional work to integrate it with an existing Node.js/Express/MongoDB backend application.
-
-This is a simple full stack [React](https://reactjs.org/) application with a [Node.js](https://nodejs.org/en/), [Express](https://expressjs.com/) and MongoDB backend. Client side code is written in React and the backend API is written using Express.
-
-### Development mode
-
-In the development mode, we will have 2 servers running. The front end code will be served by the [webpack dev server](https://webpack.js.org/configuration/dev-server/) which helps with hot and live reloading. The server side Express code will be served by a node server using [nodemon](https://nodemon.io/) which helps in automatically restarting the server whenever server side code changes.
-
-### Production mode
-
-In the production mode, we will have only 1 server running. All the client side code will be bundled into static files using webpack and it will be served by the Node.js/Express application.
-
-## Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/IADT-AdvancedJS/mern-full-stack
-
-# Go inside the directory
-cd mern-full-stack
-
-# Install dependencies
-yarn (or npm install)
-
-# Start development server
-yarn dev (or npm run dev)
-
-# ABOVE is sufficient for development
-# BELOW ONLY if preparing for production:
-
-# Build for production
-yarn build (or npm run build)
-
-# Start production server
-yarn start (or npm start)
+To get this project running first clone the repository:
 ```
+git clone https://github.com/Fergtato/React-Inspo-App
+```
+
+Enter the folder:
+```
+cd inspo-app
+```
+
+Install the dependencies:
+```
+npm install
+```
+
+Run the local server:
+```
+npm run dev
+```
+
+The project will be available at [http://localhost:3000](http://localhost:3000)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
