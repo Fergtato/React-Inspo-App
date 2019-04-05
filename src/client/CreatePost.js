@@ -25,9 +25,7 @@ class CreatePost extends Component {
     componentDidMount() {
         axios.get('api/aesthetics')
             .then(response => {
-                // this.setState({ aesthetic_id: response.data[0]._id });
                 this.setState({ aesthetics: response.data });
-                // console.log(response.data[0]._id);
             })
             .catch(error => {
                 console.log(error);
@@ -41,7 +39,6 @@ class CreatePost extends Component {
         const value = event.target.value;
 
         this.setState({[name]: value});
-    // this.setState({ aesthetic_id: this.state.aesthetics[0]._id });
     }
 
     handleSubmit(event) {

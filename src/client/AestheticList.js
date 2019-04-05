@@ -39,7 +39,7 @@ class AestheticList extends Component {
 
                     <h2>Aesthetics</h2>
 
-                    <div className="uk-child-width-1-2 uk-text-center" uk-grid="true">
+                    <div className="uk-child-width-1-2@m uk-child-width-1-1@s uk-text-center" uk-grid="true">
                         {aestheticList}
                     </div>
                 </div>
