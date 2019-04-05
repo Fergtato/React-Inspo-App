@@ -11,7 +11,7 @@ git clone https://github.com/Fergtato/React-Inspo-App
 
 Enter the folder:
 ```
-cd inspo-app
+cd React-Inspo-App
 ```
 
 Install the dependencies:
