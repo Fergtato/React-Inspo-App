@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Aesthetic extends React.Component {
     render() {
@@ -19,5 +20,12 @@ class Aesthetic extends React.Component {
         );
     }
 }
+
+Aesthetic.propTypes = {
+    title: PropTypes.string,
+    image: PropTypes.string,
+    date: PropTypes.string,
+    description: PropTypes.string
+};
 
 export default Aesthetic;
